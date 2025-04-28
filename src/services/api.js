@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getTokenFromCookies } from '@/helpers/auth'
 
 const api = axios.create({
   baseURL: 'http://localhost:3000',
@@ -6,7 +7,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use(config => {
-  const token = localStorage.getItem('access_token');
+  const token = getTokenFromCookies()
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

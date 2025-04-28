@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import { getTokenFromCookies } from '@/helpers/auth'
 
 import HomePage from '@/views/HomePage.vue';
 import LoginPage from '@/views/LoginPage.vue';
@@ -32,7 +33,7 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  const isAuthenticated = !!localStorage.getItem('access_token');
+  const isAuthenticated = !!getTokenFromCookies();
 
   if (to.matched.some(record => record.meta.requiresAuth) && !isAuthenticated) {
     next('/login');
@@ -40,5 +41,6 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+
 
 export default router;
