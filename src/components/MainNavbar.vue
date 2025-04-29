@@ -1,5 +1,5 @@
 <template>
-    <nav v-if="isLoggedIn" class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <nav v-if="isLoggedIn" class="bg-pink-700 text-white p-4 flex justify-between items-center">
         <div class="text-xl font-bold">
             Chat Voll
         </div>
