@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@rails/actioncable": "^8.0.200",
     "autoprefixer": "^9",
     "axios": "^1.9.0",
     "core-js": "^3.8.3",
