@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen flex flex-col items-center bg-gray-100 p-8">
+    <div class="min-h-screen pt-20 flex flex-col items-center bg-gray-100 p-8">
         <h1 class="text-3xl font-bold text-pink-700 mb-6">Usuários</h1>
         <ul class="w-full max-w-md bg-white rounded-lg shadow-md divide-y divide-gray-200">
             <li v-for="user in filteredUsers" :key="user.id" @click="goToConversation(user.id)"

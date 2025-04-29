@@ -5,6 +5,7 @@ import { getTokenFromCookies } from '@/helpers/auth'
 import HomePage from '@/views/HomePage.vue';
 import LoginPage from '@/views/LoginPage.vue';
 import ConversationPage from '@/views/ConversationPage.vue';
+import MetricsPage from './views/MetricsPage.vue';
 
 Vue.use(Router);
 
@@ -28,6 +29,12 @@ const router = new Router({
       props: true,
       meta: { requiresAuth: true },
       component: ConversationPage,
+    },
+    {
+      path: '/metrics',
+      name: 'Metrics',
+      component: MetricsPage,
+      meta: { requiresAuth: true }, 
     },
   ],
 });

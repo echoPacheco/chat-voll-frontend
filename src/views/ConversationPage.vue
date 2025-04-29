@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen">
+    <div class="flex flex-col h-screen pt-14">
         <div class="bg-white shadow p-4 border-b">
             <h1 class="text-xl font-bold text-gray-800 flex items-center gap-2">
                 <img :src="userIcon" alt="User Icon" class="w-6 h-6" />
